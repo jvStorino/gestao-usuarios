@@ -1,3 +1,3 @@
-from peewee import SqliteDatabase
+from peewee import PostgresqlDatabase
 
-db = SqliteDatabase('people.db')
+db = PostgresqlDatabase('postgresql://postgres:lnYxICbrGyGfiGppBxfusHPCVFbhPYCy@viaduct.proxy.rlwy.net:26526/railway', '')

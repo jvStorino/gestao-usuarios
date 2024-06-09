@@ -45,7 +45,9 @@ def formulario_clientes():
 def obter_cliente(cliente_id):
     '''obter dados de um cliente'''
 
-    cliente = Person.get_by_id(Person.id == cliente_id)
+    # cliente = Person.get_by_id(cliente_id)
+    cliente = Person.get(Person.id == cliente_id)
+
     return render_template('obter_cliente.html', cliente=cliente)
 
 
