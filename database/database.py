@@ -1,3 +1,7 @@
+import os
+from dotenv import load_dotenv
 from peewee import PostgresqlDatabase
 
-db = PostgresqlDatabase('postgresql://postgres:lnYxICbrGyGfiGppBxfusHPCVFbhPYCy@viaduct.proxy.rlwy.net:26526/railway', '')
+load_dotenv()
+
+db = PostgresqlDatabase(os.getenv('DATABASE_URI', ''))
