@@ -1,7 +1,6 @@
-import os
 from dotenv import load_dotenv
-from peewee import PostgresqlDatabase
+from peewee import SqliteDatabase
 
 load_dotenv()
 
-db = PostgresqlDatabase(os.getenv('DATABASE_URI', ''))
+db = SqliteDatabase('people.db')
